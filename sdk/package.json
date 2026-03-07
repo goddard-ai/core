@@ -1,0 +1,32 @@
+{
+  "name": "@goddard-ai/sdk",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./node": "./dist/node/index.mjs"
+  },
+  "scripts": {
+    "lint": "oxlint",
+    "fmt": "oxfmt",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "@goddard-ai/config": "workspace:*",
+    "@goddard-ai/loop": "workspace:*",
+    "@libsql/client": "^0.17.0",
+    "@mariozechner/jiti": "^2.6.5",
+    "drizzle-orm": "^0.45.1",
+    "rouzer": "^1.4.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@goddard-ai/schema": "workspace:^",
+    "@goddard-ai/storage": "workspace:^",
+    "drizzle-kit": "^0.31.9",
+    "tsdown": "^0.21.0"
+  }
+}
